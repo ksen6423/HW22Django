@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+from unicodedata import category
 
 from catalog.models import Product
 
@@ -14,15 +15,15 @@ class Command(BaseCommand):
         # 2. Добавление тестовых данных
         self.stdout.write("Добавление тестовых продуктов...")
         test_products = [
-            Product(name="Помидоры", description="Желтые", price=170, category="Овощи"),
+            Product(name="Помидоры", description="Желтые", price=170, category=category),
             Product(
                 name="Хлеб",
                 description="Ржаной",
                 price=70,
-                category="Хлебобулочные изделия",
+                category=category,
             ),
             Product(
-                name="Кофе", description="Кофе молотый", price=500, category="Кофе"
+                name="Кофе", description="Кофе молотый", price=500, category=category
             ),
         ]
 
