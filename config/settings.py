@@ -4,7 +4,7 @@ from pathlib import Path
 
 load_dotenv(override=True)
 
-from django.conf.global_settings import STATICFILES_FINDERS, STATICFILES_DIRS
+from django.conf.global_settings import STATICFILES_FINDERS, STATICFILES_DIRS, MEDIA_URL
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -94,3 +94,7 @@ STATIC_URL = "static/"
 DEFAULT_CHARSET = "utf-8"
 
 FILE_CHARSET = "utf-8"
+
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
