@@ -1,0 +1,67 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Бананы",
+        "description": "Желтые",
+        "image": "",
+        "category": "Фрукты",
+        "price": 100,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Огурцы",
+        "description": "Зеленые",
+        "image": "",
+        "category": "Овощи",
+        "price": 150,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Минеральная вода",
+        "description": "Газированная",
+        "image": "",
+        "category": "Напитки",
+        "price": 70,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Минеральная вода",
+        "description": "Негазированная",
+        "image": "",
+        "category": "Напитки",
+        "price": 50,
+        "created_at": null,
+        "updated_at": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Персики",
+        "description": "Плоские",
+        "image": "",
+        "category": "Фрукты",
+        "price": 170,
+        "created_at": null,
+        "updated_at": null
+    }
+}
+]
