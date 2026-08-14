@@ -95,6 +95,6 @@ DEFAULT_CHARSET = "utf-8"
 
 FILE_CHARSET = "utf-8"
 
-MEDIA_URL = 'media/'
+MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
