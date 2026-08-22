@@ -29,7 +29,6 @@ class Post(models.Model):
     publication_status = models.BooleanField(
         default=True
     )
-    view_count = models.IntegerField()
 
     class Meta:
         verbose_name = "Блог"
