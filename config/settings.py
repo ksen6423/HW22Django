@@ -4,7 +4,6 @@ from pathlib import Path
 
 load_dotenv(override=True)
 
-from django.conf.global_settings import STATICFILES_FINDERS, STATICFILES_DIRS, MEDIA_URL
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
