@@ -1,4 +1,6 @@
 import os
+
+from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL, EMAIL_BACKEND
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -22,6 +24,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "catalog",
     "openpage",
+    "clientbase",
 ]
 
 MIDDLEWARE = [
@@ -98,3 +101,21 @@ FILE_CHARSET = "utf-8"
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+AUTH_USER_MODEL = 'clientbase.CustomUser'
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "vahterovaksenia@yandex.ru"
+EMAIL_HOST_PASSWORD = "vxqwujwnzrivqexp"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
