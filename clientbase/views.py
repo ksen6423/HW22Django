@@ -1,4 +1,6 @@
 import secrets
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
@@ -9,7 +11,7 @@ from clientbase.models import CustomUser
 from config.settings import EMAIL_HOST_USER
 
 
-class CustomUserCreateView(CreateView):
+class CustomUserCreateView(LoginRequiredMixin, CreateView):
     model = CustomUser
     form_class = CustomUserRegisterForm
     success_url = reverse_lazy('clientbase:login')
