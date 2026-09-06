@@ -104,7 +104,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 AUTH_USER_MODEL = 'clientbase.CustomUser'
 
-LOGIN_REDIRECT_URL = "catalog:product_list"
+LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = "clientbase:login"
 
