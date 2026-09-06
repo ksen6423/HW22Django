@@ -1,0 +1,185 @@
+[
+{
+  "model": "clientbase.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$1nEU0LRW1gVPLgmdJc5jws$vwtaGG/bBr05YAe/kF2ryAW0s1kiyIHWWTQJOg7S3j0=",
+    "last_login": "2026-09-02T18:33:15.961Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-31T17:28:51.290Z",
+    "email": "admin@email.com",
+    "phone_number": null,
+    "avatar": "",
+    "country": null,
+    "token": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "clientbase.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$idL8baXmeMDNSIXoOxCAcq$otlW667Ng1mgYat8Q1Lt132yI7+SduCYPLotkKvEgE0=",
+    "last_login": "2026-09-01T18:13:38.911Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-01T17:52:42.703Z",
+    "email": "admin@example.com",
+    "phone_number": null,
+    "avatar": "",
+    "country": null,
+    "token": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "clientbase.customuser",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$s9VZbBvLaIdRtzGZpWPejk$h52i9yZ/kGtkXe8YHzYXdG7NtBzC3jURT5Rnvau+SN0=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-09-02T18:21:37.770Z",
+    "email": "vahterovaksenia@yandex.ru",
+    "phone_number": null,
+    "avatar": "",
+    "country": null,
+    "token": "50ed4454dba19efe5eb724f762492573",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "clientbase.customuser",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Slx5mDstZSLPpPE8YZmr8I$rPbmaAP1vRQqRWBIqeh15+HTeiwH+cItyorymA+u+cM=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-09-02T18:25:05.922Z",
+    "email": "admin@mail.ru",
+    "phone_number": null,
+    "avatar": "",
+    "country": null,
+    "token": "1ebec6425ca1e695e29392e4279fc0f4",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "openpage.post",
+  "pk": 1,
+  "fields": {
+    "title": "Разработка1",
+    "content": "Разработка веб-приложения",
+    "preview": "post/photo/5x8kv3thkrx5zrmri0spav6xcskb4tyu.jpg",
+    "creation_date": "2026-08-18",
+    "publication_status": true,
+    "view_count": 11
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+    "name": "Бананы",
+    "description": "Желтые"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+    "name": "Бакалея",
+    "description": "Нескоропортящиеся продукты"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 3,
+  "fields": {
+    "name": "Сыры",
+    "description": "Твердые сорта"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Кофе",
+    "description": null
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 5,
+  "fields": {
+    "name": "Овощи",
+    "description": null
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 6,
+  "fields": {
+    "name": "Хлебобулочные изделия",
+    "description": null
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "name": "Помидоры",
+    "description": "Желтые",
+    "image": "product/photo/501a109b8a71169dab34a1ee40e3f377_a7mkIVl.jpg",
+    "category": 5,
+    "price": 170,
+    "created_at": "2026-08-14",
+    "updated_at": "2026-08-14"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "name": "Хлеб",
+    "description": "Ржаной",
+    "image": "product/photo/b0abe56dc3258930c905f8ae17bb99e1e2368982-large.jpg",
+    "category": 6,
+    "price": 70,
+    "created_at": "2026-08-14",
+    "updated_at": "2026-08-14"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "name": "Кофе",
+    "description": "Кофе молотый",
+    "image": "product/photo/кофе_fgtvi7l.jpeg",
+    "category": 4,
+    "price": 500,
+    "created_at": "2026-08-14",
+    "updated_at": "2026-08-14"
+  }
+}
+]
