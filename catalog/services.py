@@ -1,8 +1,8 @@
 from django.core.cache import cache
-from django.shortcuts import render
 
 from catalog.models import Product
 from config.settings import CACHES_ENABLED
+
 
 def get_product_from_cache():
     """
@@ -19,11 +19,19 @@ def get_product_from_cache():
     return products
 
 
-def get_products_by_category(category_id):
-    return Product.objects.filter(category_id=category_id).select_related('category')
+def get_products_by_category(category_id: int):
+    queryset = Product.objects.filter(
+        category_id=category_id
+    ).select_related("category")
 
-def category_products(request, category_id):
-    products = get_products_by_category(category_id)
-    return render(request, 'category_products.html', {'products': products})
+    if not CACHES_ENABLED:
+        return queryset
 
+    cache_key = f"category_{category_id}"
+    products = cache.get(cache_key)
 
+    if products is None:
+        products = list(queryset)
+        cache.set(cache_key, products, timeout=60)
+
+    return products

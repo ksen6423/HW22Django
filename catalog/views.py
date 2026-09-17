@@ -2,14 +2,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
-from django.utils.decorators import method_decorator
-from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, DetailView, TemplateView, UpdateView, CreateView, DeleteView
 
 
 from catalog.forms import ProductForm, ProductModeratorForm
 from catalog.models import Product
-from catalog.services import get_product_from_cache
+from catalog.services import get_product_from_cache, get_products_by_category
+
+
+@staticmethod
+def category_products(request, category_id):
+    products = get_products_by_category(category_id)
+    return render(request, 'category_products.html', {'products': products})
 
 
 class HomeView(TemplateView):
