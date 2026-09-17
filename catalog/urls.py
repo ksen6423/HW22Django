@@ -2,7 +2,7 @@ from django.urls import path
 from django.views.decorators.cache import cache_page
 
 from catalog.apps import CatalogConfig
-from catalog.services import category_products
+from catalog.views import category_products
 from catalog.views import HomeView, ProductListView, ProductDetailView, ProductCreateView, ProductUpdateView, \
     ProductDeleteView
 from catalog.views import ContactsView
